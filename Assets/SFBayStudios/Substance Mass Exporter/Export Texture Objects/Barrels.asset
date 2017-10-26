@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8badec42168b14767b42078b7838a8ab, type: 3}
+  m_Name: Barrels
+  m_EditorClassIdentifier: 
+  groupName: Barrels Demo
+  materials:
+  - materialName: Barrel1_Alt1
+    substancePath: Assets/SFBayStudios/SFB Dungeon Plus/Customizable Materials & Prefabs/Dark
+      Stone Materials/Barrels/SFBv1_Barrel1_Alt1.sbsar
+    generateAllOutputs: 0
+    loadingCacheClear: 1
+  - materialName: Barrel1
+    substancePath: Assets/SFBayStudios/SFB Dungeon Plus/Customizable Materials & Prefabs/Dark
+      Stone Materials/Barrels/SFBv1_Barrel1.sbsar
+    generateAllOutputs: 0
+    loadingCacheClear: 1
+  - materialName: Barrel2_Alt1
+    substancePath: Assets/SFBayStudios/SFB Dungeon Plus/Customizable Materials & Prefabs/Dark
+      Stone Materials/Barrels/SFBv1_Barrel2_Alt1.sbsar
+    generateAllOutputs: 0
+    loadingCacheClear: 1
+  - materialName: Barrel2
+    substancePath: Assets/SFBayStudios/SFB Dungeon Plus/Customizable Materials & Prefabs/Dark
+      Stone Materials/Barrels/SFBv1_Barrel2.sbsar
+    generateAllOutputs: 0
+    loadingCacheClear: 1
+  textureNames:
+  - albedoOpacity
+  - normal
+  - ambientOcclusion
+  - emissive
+  - metallicRoughness
+  - albedo
+  - roughness
+  - metallic
+  - height
+  showMaterials: 1
+  showTextures: 0
+  showReuse: 0
+  setNormalMapMode: 1
+  createMaterials: 1
+  convertToPNG: 1
+  newMaterial: {fileID: 0}

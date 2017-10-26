@@ -1,0 +1,20 @@
+SUBSTANCE MASS EXPORTER
+
+1. Open the editor window by choosing Window/Substance Mass Exporter/Load Exporter Window
+
+2. Create an Exporter Object (ScriptableObject) by choosing Window/Substance Mass Exporter/Create Exporter Object
+
+3. Rename it if you wish, then populate the “Exporter Object” field with the new object.
+
+4. Assign .sbsar files to the “Selected Materials” list using one of these methods:
+  A. Click the “Add Procedural Material” file picker, and simply click on each .sbsar file you’d like to include.
+  B. Drag a .sbsar file into the “Add Procedural Material” field.
+  C. Select Substances or Procedural Materials in the Inspector (multiple allowed) and choose Window/Substance Mass Exporter/Include Selected Materials(s) — There is also a hot key available, Command-Shift-E
+
+5. Ensure “Generate All Outputs” is set for all textures.
+
+6. Set the options near the top.  If you’re going to create materials for game use, select “Set Normal Map Mode”, but if the maps will be used in another .sbsar graph as a custom material, keep that unchecked.  You can save some disk space by converting the .tga (default) files to .png.
+
+6. Choose which “Texture Outputs” to keep.
+
+7. If you’re exporting multiple versions of the same material, but with changes only to a few maps (such as changing the colors of a model, but not changing the roughness or other maps), you can select some textures to reuse in the “Reuse Textures” area.  If checked, the script will attempt to use the first exported textures for all subsequent exports, saving space and memory use in game.
