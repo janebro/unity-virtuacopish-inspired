@@ -25,7 +25,7 @@ public class Crosshair : MonoBehaviour {
             {
                 if (hit.transform.gameObject.tag == "Enemy")
                 {
-                    Debug.Log("SCORE");
+                    hit.transform.parent.GetComponent<Soldier>().Hit();
                 }
             }
         }
