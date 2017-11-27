@@ -5,15 +5,13 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour {
 
     public Soldier[] enemies;
-
-	// Use this for initialization
-	void Start () {
-
-	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (GameController.Instance.IsGameOver)
+            return;
+
         foreach (Soldier enemy in enemies)
         {
             if (enemy.IsActive)

@@ -32,11 +32,6 @@ public class Soldier : MonoBehaviour
         Invoke("MoveDownards", shootTime);
     }
 
-    public void ShootEvent()
-    {
-        GameController.Instance.SetDamage(10);
-    }
-
     private void MoveUpwards()
     {
         Vector3 enemyPos = _mEnemy.transform.position;
@@ -70,8 +65,6 @@ public class Soldier : MonoBehaviour
     void OnUpComplete()
     {
         _mAnimator.SetBool("shoot", true);
-        //TODO: Call this via event of shoot animation
-        ShootEvent();
         muzzleFlashParticle.Play();
     }
 

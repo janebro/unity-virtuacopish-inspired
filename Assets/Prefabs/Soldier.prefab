@@ -435,6 +435,7 @@ GameObject:
   - component: {fileID: 4685234082632988}
   - component: {fileID: 95339826680229920}
   - component: {fileID: 136812138205401256}
+  - component: {fileID: 114567710594660832}
   m_Layer: 0
   m_Name: ToonSoldier_demo
   m_TagString: Enemy
@@ -559,8 +560,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1788210073565556}
   m_LocalRotation: {x: 0.007864676, y: 0.992371, z: -0.0029417714, w: 0.12300149}
-  m_LocalPosition: {x: 230.38, y: 1.3, z: 87.54}
-  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
+  m_LocalPosition: {x: 230.2, y: 1.3, z: 88.1}
+  m_LocalScale: {x: 2.200001, y: 2.2000005, z: 2.2000024}
   m_Children:
   - {fileID: 4685234082632988}
   m_Father: {fileID: 0}
@@ -1059,6 +1060,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114567710594660832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705702583894628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213a0f36423a0d8459f396ae009d27f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114917000323056288
 MonoBehaviour:
   m_ObjectHideFlags: 1
