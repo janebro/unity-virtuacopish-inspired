@@ -10,6 +10,7 @@ public class Soldier : MonoBehaviour
     private Animator _mAnimator = null;
     private bool _isActive = false;
     private Vector3 _mStartPos = Vector3.zero;
+    private AudioSource audioSrc;
 
     public ParticleSystem muzzleFlashParticle;
     public float upTime = 3.0f;
@@ -22,6 +23,7 @@ public class Soldier : MonoBehaviour
         _mEnemy = transform.GetChild(0).gameObject;
         _mAnimator = _mEnemy.GetComponent<Animator>();
         _mStartPos = _mEnemy.transform.position;
+        audioSrc = GetComponent<AudioSource>();
     }
 
     public void Activate()
@@ -44,12 +46,14 @@ public class Soldier : MonoBehaviour
     {
         _mAnimator.SetTrigger("hit");
         muzzleFlashParticle.Stop();
+        audioSrc.Stop();
     }
 
     private void MoveDownards()
     {
         _mAnimator.SetBool("shoot", false);
         muzzleFlashParticle.Stop();
+        audioSrc.Stop();
 
         Vector3 enemyPos = _mEnemy.transform.position;
         enemyPos.y -= 4;
@@ -66,6 +70,7 @@ public class Soldier : MonoBehaviour
     {
         _mAnimator.SetBool("shoot", true);
         muzzleFlashParticle.Play();
+        audioSrc.Play();
     }
 
     public bool IsActive

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +10,13 @@ public class GameController : Singleton<GameController>
     private int _mHealth = 100;
     private int _mTimer = 30;
     private bool _mGameOver = false;
+    public EventHandler GameOverEvent;
+
+    private void OnGameOver()
+    {
+        if (GameOverEvent != null)
+            GameOverEvent(this, EventArgs.Empty);
+    }
 
     private void Start()
     {
@@ -21,6 +29,7 @@ public class GameController : Singleton<GameController>
         {
             _mGameOver = true;
             CancelInvoke("Count");
+            OnGameOver();
         }
         else
         {
@@ -40,12 +49,24 @@ public class GameController : Singleton<GameController>
             _mHealth = 0;
             _mGameOver = true;
             CancelInvoke("Count");
+            OnGameOver();
         }
     }
 
     public bool IsGameOver
     {
         get { return _mGameOver; }
+    }
+
+    public bool isWin
+    {
+        get
+        {
+            if (Health <= 0)
+                return false;
+
+            return true;
+        }
     }
 
     public int Health
